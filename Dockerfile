@@ -15,7 +15,7 @@ RUN set -ex \
 # Install Chromedriver
 RUN set -ex \
     && cd /tmp \
-    && wget -Nv http://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip \
+    && wget -Nv http://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip \
     && unzip chromedriver_linux64.zip \
     && chmod -v +x chromedriver \
     && mv -v chromedriver /usr/local/bin/ \
