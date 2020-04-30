@@ -1,7 +1,7 @@
-FROM ruby:2.3.3
+FROM ruby:2.4.7
 LABEL description="Ruby image with Chrome and Chromedriver"
-LABEL version="2.3.3"
-MAINTAINER Shalva Usubov <shaliko@2glab.com>
+LABEL version="2.4.7"
+MAINTAINER Shalva Usubov <joaom.dev@hotmail.com>
 
 # Install Chrome
 RUN set -ex \
@@ -15,7 +15,7 @@ RUN set -ex \
 # Install Chromedriver
 RUN set -ex \
     && cd /tmp \
-    && wget -Nv http://chromedriver.storage.googleapis.com/2.39/chromedriver_linux64.zip \
+    && wget -Nv https://chromedriver.storage.googleapis.com/83.0.4103.14/chromedriver_linux64.zip \
     && unzip chromedriver_linux64.zip \
     && chmod -v +x chromedriver \
     && mv -v chromedriver /usr/local/bin/ \
